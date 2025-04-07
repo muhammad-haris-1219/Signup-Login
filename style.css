@@ -1,0 +1,59 @@
+#main {
+    width: 90%;
+    height: 80vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 95%;
+    height: 90%;
+    /* background: red;     */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1%;
+    padding: 1%;
+
+}
+
+#container>input {
+    text-align: center;
+    font: italic small-caps bold 20px/30px Georgia, serif;
+}
+
+#container>:nth-child(1),
+:nth-child(6) {
+    grid-column: 1/3;
+}
+
+.container {
+    grid-gap: 2% !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+}
+
+.container>[placeholder='Password'],
+[placeholder='Admin Code'],
+[placeholder='Email'] {
+    grid-column: 1/3;
+}
+
+.container>input {
+    order: -1 !important;
+}
+
+
+
+
+
+
+/* #a{
+    background: purple;
+} */
+/* .aa {
+    background: yellow !important;
+    transition: background-color 2s ease, transform 2s ease;
+   
+} */
