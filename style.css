@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -14,13 +13,11 @@ body {
     align-items: center;
 }
 
-
 #main {
     width: 100%;
     max-width: 900px;
     padding: 20px;
 }
-
 
 #container {
     background: #fff;
@@ -31,7 +28,6 @@ body {
     gap: 1.5rem;
     transition: all 0.3s ease;
 }
-
 
 #container input,
 .container input {
@@ -53,7 +49,6 @@ body {
     box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.2);
 }
 
-
 #signup,
 #login {
     padding: 14px;
@@ -72,7 +67,6 @@ body {
 #login:hover {
     background: linear-gradient(135deg, #5a4bcb, #322c70);
 }
-
 
 @media (min-width: 768px) {
     #container {
@@ -94,7 +88,6 @@ body {
     #login          { grid-area: login; }
 }
 
-
 @media (max-width: 767px) {
     #container {
         display: flex;
@@ -107,7 +100,6 @@ body {
         width: 100%;
     }
 }
-
 
 #container input,
 #signup,
@@ -125,4 +117,30 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+#container:has(input[placeholder="Enter Your Email"]),
+#container:has(input[placeholder="Enter Your Password"]),
+#container:has(input[placeholder="For only Admin"]) {
+   
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.5rem;
+    grid-template-columns: none !important;
+    grid-template-areas: none !important;
+}
+
+
+#container:has(input[placeholder="Enter Your Email"]) input,
+#container:has(input[placeholder="Enter Your Email"]) button {
+    width: 100%;
+}
+
+#container:has(input[placeholder="Enter Your Email"]) button {
+    order: 2;
+}
+
+#container:has(input[placeholder="Enter Your Email"]) input {
+    order: 1;
 }
