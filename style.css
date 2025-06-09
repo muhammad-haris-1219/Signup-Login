@@ -59,13 +59,16 @@ body {
     background: linear-gradient(135deg, #6a5acd, #483d8b);
     color: white;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     letter-spacing: 0.5px;
 }
 
 #signup:hover,
 #login:hover {
-    background: linear-gradient(135deg, #5a4bcb, #322c70);
+    color: #483d8b;
+    font-weight: bolder;
+    outline: medium double #483d8b;
+    background: none;
 }
 
 @media (min-width: 768px) {
@@ -78,14 +81,37 @@ body {
             "signup login";
     }
 
-    #userName       { grid-area: name; }
-    #userEmail      { grid-area: email; }
-    #userContact    { grid-area: contact; }
-    #userLocation   { grid-area: location; }
-    #userPassword   { grid-area: password; }
-    #Admin          { grid-area: admin; }
-    #signup         { grid-area: signup; }
-    #login          { grid-area: login; }
+    #userName {
+        grid-area: name;
+    }
+
+    #userEmail {
+        grid-area: email;
+    }
+
+    #userContact {
+        grid-area: contact;
+    }
+
+    #userLocation {
+        grid-area: location;
+    }
+
+    #userPassword {
+        grid-area: password;
+    }
+
+    #Admin {
+        grid-area: admin;
+    }
+
+    #signup {
+        grid-area: signup;
+    }
+
+    #login {
+        grid-area: login;
+    }
 }
 
 @media (max-width: 767px) {
@@ -109,8 +135,13 @@ body {
     animation: fadeInUp 0.4s ease forwards;
 }
 
-#signup { animation-delay: 0.05s; }
-#login { animation-delay: 0.1s; }
+#signup {
+    animation-delay: 0.05s;
+}
+
+#login {
+    animation-delay: 0.1s;
+}
 
 @keyframes fadeInUp {
     to {
@@ -123,7 +154,7 @@ body {
 #container:has(input[placeholder="Enter Your Email"]),
 #container:has(input[placeholder="Enter Your Password"]),
 #container:has(input[placeholder="For only Admin"]) {
-   
+
     display: flex !important;
     flex-direction: column;
     gap: 1.5rem;
